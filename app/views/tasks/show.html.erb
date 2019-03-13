@@ -15,5 +15,6 @@
   <%= @task.status %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'タスク編集', edit_task_path(@task) %> |
+<%= link_to 'タスク一覧', tasks_path %>
+<%= link_to 'タスク削除', task_path, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
