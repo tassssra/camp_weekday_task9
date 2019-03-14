@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all # タスク一覧
+    @new_tasks = Task.find_newest_task
   end
 
   # GET /tasks/1
@@ -59,6 +59,10 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_url, notice: 'タスクを削除しました。' }
       format.json { head :no_content }
     end
+  end
+
+  def hide
+    @tasks = Task.all
   end
 
   private
