@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    @new_tasks = Task.find_new_tasks.where(is_display: true)
+    @new_tasks = Task.where(is_display: true).find_new_tasks
   end
 
   def show

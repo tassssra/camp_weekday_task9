@@ -24,13 +24,13 @@
 }
 
 .status-draft {
-  color: #ff0000;
+  color: #ff0000 !important;
 }
 
 .status-published {
-  color: #0000ff;
+  color: #0000ff !important;
 }
 
 .status-archieved {
-  color: #008000;
+  color: #008000 !important;
 }
