@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_03_13_102212) do
 
   create_table "tasks", force: :cascade do |t|
-    t.string "title"
-    t.text "memo"
+    t.string "title", null: false
+    t.text "memo", null: false
     t.boolean "is_display", default: true
     t.integer "status"
     t.datetime "created_at", null: false

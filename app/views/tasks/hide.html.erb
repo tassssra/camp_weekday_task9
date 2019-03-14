@@ -1,12 +1,12 @@
 <h1>非表示タスク一覧</h1>
-<% @tasks.each do |task| %>
-  <% if task.is_display == false %>
+<% @hide_tasks.each do |hide_task| %>
+  <div>
     <ul>
       <li>
-        <%= link_to task.title, task %>
-        <%= task.created_at.strftime('%Y年%m月%d日') %>
+        <%= link_to hide_task.title, hide_task %>
+        <%= hide_task.created_at.strftime('%Y年%m月%d日') %>
       </li>
     </ul>
-  <% end %>
+  </div>
 <% end %>
 <%= link_to "一覧", tasks_path %>
