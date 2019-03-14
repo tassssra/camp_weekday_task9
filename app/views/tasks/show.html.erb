@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>タスク詳細</h1>
-
 <p>
   <strong>タスク名:</strong>
   <%= @task.title %>
@@ -17,6 +15,6 @@
   <%= @task.status %>
 </p>
 
-<%= link_to 'タスク編集', edit_task_path(@task) %> |
-<%= link_to 'タスク一覧', tasks_path %>
-<%= link_to 'タスク削除', task_path, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
+<%= link_to '一覧', tasks_path %>
+<%= link_to '編集', edit_task_path(@task) %> |
+<%= link_to '削除', task_path, method: :delete, data: { confirm: '削除してよろしいですか？' } %>

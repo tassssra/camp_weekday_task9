@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+#error_explanation {
+  color: red;
+  list-style: none;
+}
+
+#notice {
+  color: blue;
+}
+
+.status-draft {
+  color: #ff0000;
+}
+
+.status-published {
+  color: #0000ff;
+}
+
+.status-archieved {
+  color: #008000;
+}
