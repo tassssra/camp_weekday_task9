@@ -1,27 +1,4 @@
+<% @submit_btn_text = "更新" %>
 <h1>タスク更新フォーム</h1>
 
-<%= render 'shared/error', task: @task %>
-
-<%= form_with(model: @task, local: true) do |form| %>
-  <div class="field">
-    <%= form.label "タスク名：" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label "タスクメモ：" %>
-    <%= form.text_area :memo %>
-  </div>
-
-  <div class="field">
-    <%= form.label "状態：" %>
-    <%= form.select :status, [["下書き", "draft"], ["公開", "published"], ["アーカイブ", "archieved"]] %>
-  </div>
-
-  <p>
-    <%= form.submit "更新" %>
-  </p>
-<% end %>
-
-<%= link_to 'タスク詳細', @task %> |
-<%= link_to 'タスク一覧', tasks_path %>
+<%= render 'shared/form', task: @task %>
