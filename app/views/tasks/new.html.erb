@@ -2,4 +2,25 @@
 
 <%= render 'form', task: @task %>
 
-<%= link_to '一覧', tasks_path %>
+<%= form_with(model: @task, local: true) do |form| %>
+  <div class="field">
+    <%= form.label "タスク名：" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label "タスクメモ：" %>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div class="field">
+    <%= form.label "状態：" %>
+    <%= form.select :status, [["下書き", "draft"], ["公開", "published"], ["アーカイブ", "archieved"]] %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録" %>
+  </div>
+<% end %>
+
+<%= link_to 'タスク一覧', tasks_path %>
