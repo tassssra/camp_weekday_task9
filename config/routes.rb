@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "tasks#index"
-  get "/tasks/hide" => "tasks#hide"
-  resources :tasks
+  resources :tasks do
+    collection do
+      get :hide
+    end
+  end
 end

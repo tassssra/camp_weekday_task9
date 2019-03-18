@@ -14,23 +14,3 @@
  *= require_self
  */
 
-#error_explanation {
-  color: red;
-  list-style: none;
-}
-
-#notice {
-  color: blue;
-}
-
-.status-draft {
-  color: #ff0000 !important;
-}
-
-.status-published {
-  color: #0000ff !important;
-}
-
-.status-archieved {
-  color: #008000 !important;
-}

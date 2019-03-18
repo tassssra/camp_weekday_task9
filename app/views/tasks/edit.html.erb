@@ -1,4 +1,5 @@
-<% @submit_btn_text = "更新" %>
+# views/tasks/edit.html.erb
+
 <h1>タスク更新フォーム</h1>
 
-<%= render 'shared/form', task: @task %>
+<%= render partial: 'shared/form', locals: { task: @task, submit_btn_text: '更新' }  %>

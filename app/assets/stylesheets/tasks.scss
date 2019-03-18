@@ -1,3 +1,23 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#error_explanation {
+  color: red;
+  list-style: none;
+}
+
+#notice {
+  color: blue;
+}
+
+.status-draft {
+  color: #ff0000 !important;
+}
+
+.status-published {
+  color: #0000ff !important;
+}
+
+.status-archieved {
+  color: #008000 !important;
+}
