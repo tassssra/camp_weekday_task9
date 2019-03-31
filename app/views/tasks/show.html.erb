@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>タスク名:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>タスクメモ:</strong>
+  <%= @task.memo %>
+</p>
+
+<p>
+  <strong>状態:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>登録日:</strong>
+  <%= @task.created_at.strftime("%Y年%m月%d日") %>
+</p>
+
+<%= link_to '一覧', tasks_path %>
+<%= link_to '編集', edit_task_path %> |
+<%= link_to '削除', task_path, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
